@@ -141,6 +141,7 @@ bot.on('message', message=>{
                     .addField('c/twitter', 'Get a link to our Twitter page')
                     .addField('c/youtube', 'Get a link to our YouTube page')
                     .addField('c/twitch', 'Get a link to our Twitch page')
+                    .addField('c/online', 'See the online time of the bot')
                     .setColor(0x2ECC71)
                     message.channel.sendEmbed(help);
                     break;
