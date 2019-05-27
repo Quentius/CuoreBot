@@ -5,12 +5,12 @@
   "main": "bot.js",
   "scripts": {
     "test": "c"
-    "start": "node bot.js"
+    "start" "node bot.js"
   },
   "author": "Ninja.NLG",
   "license": "ISC",
   "dependencies": {
     "discord.js": "11.5.0"
-    "request": "2.81.0"
+    "request" "2.81.0"
   }
 }
