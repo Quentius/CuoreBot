@@ -1,0 +1,2 @@
+# CuoreBot
+CuoreLeague discord bot
