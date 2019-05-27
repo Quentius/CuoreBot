@@ -215,4 +215,4 @@ bot.on('message', message=>{
 })
 
 
-client.login(token);
+bot.login(token);
