@@ -124,7 +124,7 @@ bot.on('message', message=>{
                     const nextseason = new Discord.RichEmbed()
                     .setTitle('Teams that will join next season:')
                     .addField('Decrypt eSports', 'Captain: Current.Decrypt\nNat: Europe')
-                    .addField('FeaR eSports', 'Captain: Pjotter.Fear\nNat: Europe')
+                    .addField('FeaR eSports', 'Captain: Pjotter.FeaR\nNat: Europe')
                     .setColor(0xEC7063)
                     message.channel.sendEmbed(nextseason);
                     break;     
