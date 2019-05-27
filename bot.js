@@ -118,7 +118,7 @@ bot.on('message', message=>{
                             ]
                           }
                         });
-                break;
+                    break;
             case 'nextseason':
                 if(!message.member.roles.find(r => r.name === "Moderator")) return message.channel.send("You do not have permissions")
                     const nextseason = new Discord.RichEmbed()
