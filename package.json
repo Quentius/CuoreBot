@@ -5,7 +5,6 @@
   "main": "bot.js",
   "scripts": {
     "test": "c"
-    "start": "node bot.js"
   },
   "author": "Ninja.NLG",
   "license": "ISC",
