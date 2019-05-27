@@ -179,14 +179,19 @@ bot.on('message', message=>{
                     break;
             case 'online':
                 if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
-                    let totalSeconds = (client.uptime / 1000);
+                    let totalSeconds = (bot.uptime / 1000);
                     let days = Math.floor(totalSeconds / 86400);
                     let hours = Math.floor(totalSeconds / 3600);
                     totalSeconds %= 3600;
                     let minutes = Math.floor(totalSeconds / 60);
-                    let seconds = totalSeconds % 60;
+                    let seconds = Math.floor(totalSeconds % 60);
                     let uptime = `${days} days, ${hours} hours, ${minutes} minutes and ${seconds} seconds`;
-                    message.channel.sendMessaage(uptime);
+                    const embed = new Discord.RichEmbed()
+                    .setTitle('Runtime:')
+                    .addField('The bot has been online for:', uptime)
+                    .setColor(0xF7FF00)
+                    message.channel.sendEmbed(embed);
+                    break;
         }
         switch(args[0]){
             case 'esl1':
