@@ -163,18 +163,18 @@ bot.on('message', message=>{
                     break;
             case 'week':
                 if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
-                    const week = new Discord.RichEmbed()
-                    .setTitle('Week 1 - 8 & 9 June - CuoreLeague')
-                    .addField('Teams that play saturday:', 'Dark Assassins - NoLimitsGaming\nThe Problem Gods1 - FeaR eSports\nThe Problem Gods22 - Affinity eSports\n', true)
-                    .addField('_ _', '')
-                    .addField('Teams that play sunday:', 'Burning Foxes - Wasted Potential\nYAG eSports - Evo Dev Team\nFor Defenders - Team IntelliGents', true)
-                    .addField('_ _', 'N/A')
-                    .addField('Time', '19:00\n20:15\n21:30', true)
-                    .addField('Score played matches', 'N/A')
-                    .addField('_ _', 'N/A')
-                    .addField('Twitch', 'https://www.twitch.tv/cuoreleague')
-                    .setColor(0x2ECC71)
-                    message.channel.sendEmbed(week);
+                    message.channel.send({embed: {
+                            color: 2491032,
+                            title: "Week 1 - 8 & 9 June - CuoreLeague",
+                            fields: [
+                              { name: "Teams that play saturday:", value: "Dark Assassins - NoLimitsGaming\nThe Problem Gods1 - FeaR eSports\nThe Problem Gods22 - Affinity eSports\n", inline: true},
+                              { name: "Teams that play sunday", value: "Burning Foxes - Wasted Potential\nYAG eSports - Evo Dev Team\nFor Defenders - Team IntelliGents", inline: true},
+                              { name: "Time", value: "19:00\n20:15\n:21:30", inline: true},
+                              { name: 'Score:', value: 'N/A\nN/A\nN/A', inline: true},
+                              { name: 'Twitch:', value: "https://www.twitch.tv/cuoreleague", inline: false}
+                            ]
+                          }
+                        });
                     break;
             case 'leagueinfo':
                 if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
