@@ -168,10 +168,10 @@ bot.on('message', message=>{
                             title: "Week 1 - 8 & 9 June - CuoreLeague",
                             fields: [
                               { name: "Teams that play saturday:", value: "DA - NLG\nTPG1 - FEs\nTPG2 - AE\n", inline: true},
-                              { name: "Time", value: "19:00\n20:15\n:21:30", inline: true},
+                              { name: "Time", value: "19:00\n20:15\n21:30", inline: true},
                               { name: 'Score:', value: 'N/A\nN/A\nN/A', inline: true},
                               { name: "Teams that play sunday", value: "BF - WP\nYAG - EDT\nFD - TI", inline: true},
-                              { name: "Time", value: "19:00\n20:15\n:21:30", inline: true},
+                              { name: "Time", value: "19:00\n20:15\n21:30", inline: true},
                               { name: 'Score:', value: 'N/A\nN/A\nN/A', inline: true},
                               { name: 'Twitch:', value: "https://www.twitch.tv/cuoreleague", inline: false}
                             ]
