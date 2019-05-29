@@ -167,10 +167,12 @@ bot.on('message', message=>{
                             color: 2491032,
                             title: "Week 1 - 8 & 9 June - CuoreLeague",
                             fields: [
-                              { name: "Teams that play saturday:", value: "Dark Assassins - NoLimitsGaming\nThe Problem Gods1 - FeaR eSports\nThe Problem Gods22 - Affinity eSports\n", inline: true},
+                              { name: "Teams that play saturday:", value: "DA - NLG\nTPG1 - FEs\nTPG2 - AE\n", inline: true},
                               { name: "Time", value: "19:00\n20:15\n:21:30", inline: true},
                               { name: 'Score:', value: 'N/A\nN/A\nN/A', inline: true},
-                              { name: "Teams that play sunday", value: "Burning Foxes - Wasted Potential\nYAG eSports - Evo Dev Team\nFor Defenders - Team IntelliGents", inline: true},
+                              { name: "Teams that play sunday", value: "BF - WP\nYAG - EDT\nFD - TI", inline: true},
+                              { name: "Time", value: "19:00\n20:15\n:21:30", inline: true},
+                              { name: 'Score:', value: 'N/A\nN/A\nN/A', inline: true},
                               { name: 'Twitch:', value: "https://www.twitch.tv/cuoreleague", inline: false}
                             ]
                           }
