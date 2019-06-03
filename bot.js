@@ -1,73 +1,152 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-const PREFIX =  'nlg/';
+const PREFIX =  'c/';
 
 bot.on('ready', () => {
-    console.log('This bot is online!');
+    console.log('This bot is online!')
 })
 
 bot.on('message', message=>{
     let args = message.content.substring(PREFIX.length).split(" ");
         switch(args[0]) {
-            case 'training':
-                if(!message.member.roles.find(r => r.name === 'ESL1')) return message.channel.send('You do not have permissions')
-                    message.channel.send({embed: {
-                        color: 9291032,
-                        title: "3-9 June Week",
-                        fields: [
-                          { name: "Day", value: "Monday\nTuesday\nWednesday\nThursday\nFriday\nSaturday\nSunday Af\nSunday Ev", inline: true},
-                          { name: "What", value: "Scrim\nTraining\nScrim\nESL Benelux\nTraining\nCuore\nESL Europe\nTraining", inline: true},
-                          {name: 'Time', value: '19:30\n19:00\n20:00\n19:00\n20:00\n19:00\n15:00\n20:30', inline: true},
-                        ]
-                      }
-                    });
-        }
-        switch(args[0]) {
             case 'clear':
                 if(!message.member.roles.find(r => r.name === "Moderator")) return message.channel.send("You do not have permissions")
                     if(!args[1])  return message.reply('Error please define second arg')
+                    message.channel.bulkDelete(2)
                     message.channel.bulkDelete(args[1]);
                     break;
-            case 'teams':
+             case 'teams':
                 if(!message.member.roles.find(r => r.name === "Moderator")) return message.channel.send("You do not have permissions")
                        const nlg = new  Discord.RichEmbed()
-                    .setTitle('No Limits Gaming [1]')
+                    .setTitle('Team name: No Limits Gaming')
                     .addField('Nationality', 'Europe')
                     .addField('Captains Discord', "@Nick[Ninja]#5302")
                     .addField('Captains Uplay', 'Ninja.NLG')
                     .setColor(0xFF7400)
                     message.channel.sendEmbed(nlg);
-                    const nlg1 = new  Discord.RichEmbed()
-                    .setTitle('No Limits Gaming [2]')
+
+                    const da = new  Discord.RichEmbed()
+                    .setTitle('Team name: Dark Assassins')
                     .addField('Nationality', 'Europe')
-                    .addField('Captains Discord', "@Ecaron.NLG#6541")
-                    .addField('Captains Uplay', 'Ecaron.NLG')
-                    .setColor(0xFF7400)
-                    message.channel.sendEmbed(nlg1);
-                    break; 
+                    .addField('Captains Discord', "@gouldyoldy.DAS#2127 ")                
+                    .addField('Captains Uplay', 'Gouldyoldy.DAS')
+                    .setColor(0x001FFF)
+                    message.channel.sendEmbed(da);
+                    const tpg1 = new  Discord.RichEmbed()
+                    .setTitle('Team name: The Problem Gods[1]')
+                    .addField('Nationality', 'Hungary')
+                    .addField('Captains Discord', "@[TPG]Ader#8140")                
+                    .addField('Captains Uplay', 'TPG_xDxRLxRD')
+                    .setColor(0xFFF000)
+                    message.channel.sendEmbed(tpg1);
+                    const tpg2 = new  Discord.RichEmbed()
+                    .setTitle('Team name: The Problem Gods[2]')
+                    .addField('Nationality', 'Hungary')
+                    .addField('Captains Discord', "@Jarnekem#6116")                
+                    .addField('Captains Uplay', 'TPG_Jarnekem')
+                    .setColor(0x9F0E0E)
+                    message.channel.sendEmbed(tpg2);
+                    const bf = new  Discord.RichEmbed()
+                    .setTitle('Team name: Burning Foxes')
+                    .addField('Nationality', 'Europe')
+                    .addField('Captains Discord', "@Fishy#2425")                
+                    .addField('Captains Uplay', 'Fishy.Arion')
+                    .setColor(0xCC1C79)
+                    message.channel.sendEmbed(bf);
+                    const hon = new  Discord.RichEmbed()
+                    .setTitle('Team name: Honor eSports')
+                    .addField('Nationality', 'Europe')
+                    .addField('Captains Discord', "@Atlas#7445")                
+                    .addField('Captains Uplay', 'Atlas.YAG')
+                    .setColor(0x12DEA3)
+                    message.channel.sendEmbed(hon);
+                    const fd = new  Discord.RichEmbed()
+                    .setTitle('Team name: For Defenders')
+                    .addField('Nationality', 'Europe')
+                    .addField('Captains Discord', "@DaBi#0515") 
+                    .addField('Captains Uplay', 'Waza..')
+                    .setColor(0x2EFF00)
+                    message.channel.sendEmbed(fd);
+                    const ti = new  Discord.RichEmbed()
+                    .setTitle('Team name: Team IntelliGents')
+                    .addField('Nationality', 'Europe')
+                    .addField('Captains Discord', "@Dr_Klenk#8437") 
+                    .addField('Captains Uplay', 'Klenk.iGents')
+                    .setColor(0x7C00FF)
+                    message.channel.sendEmbed(ti);
+                    const edt = new  Discord.RichEmbed()
+                    .setTitle('Team name: Evo Dev Team')
+                    .addField('Nationality', 'British')
+                    .addField('Captains Discord', "@Dicta.Evo#4977") 
+                    .addField('Captains Uplay', 'Dicta.Evo')
+                    .setColor(0x6968A5)
+                    message.channel.sendEmbed(edt);
+                    const wp = new  Discord.RichEmbed()
+                    .setTitle('Team name: Wasted Potential')
+                    .addField('Nationality', 'British')
+                    .addField('Captains Discord', "Mufn#4779") 
+                    .addField('Captains Uplay', 'Mufn.WP')
+                    .setColor(0x364F36)
+                    message.channel.sendEmbed(wp);
+                    const ae = new  Discord.RichEmbed()
+                    .setTitle('Team name: Affinity eSports')
+                    .addField('Nationality', 'Europe')
+                   .addField('Captains Discord', "MrBrown#4682") 
+                    .addField('Captains Uplay', 'MrBrown.AFF')
+                    .setColor(0xF5CBA7)
+                    message.channel.sendEmbed(ae);
+                    const tf = new Discord.RichEmbed()
+                    .setTitle('Team name: FeaR')
+                    .addField('Nationality', 'Europe')
+                    .addField('Captains Discord', '@PjotterSmokes#8310 ')
+                    .addField('Captains Uplay', 'Pjotter.FeaR')
+                    .setColor(0xD2B4DE)
+                    message.channel.sendEmbed(tf);
+                    break;
+                case 'tinfo':
+                    if(!message.member.roles.find(r => r.name === "Moderator")) return message.channel.send("You do not have permissions")
+                        message.channel.send({embed: {
+                            color: 9291032,
+                            title: "Cuore League - Teams:",
+                            fields: [
+                              { name: "Teams 1-6", value: "NoLimitsGaming\nDarkAssassin's\nTheProblemGods1\nForDefenders\nEvoDevTeam\nAffinityeSports", inline: true},
+                              { name: "Teams 7-12", value: "TheProblemGods2\nBurningFoxes\nYAGeSports\nTeamIntelliGents\nWatedPotential\nFeaR eSports", inline: true},
+                              {name: '_ _', value: '_ _', inline: false},
+                              {name: 'There are currently:', value: '12 teams', inline: false}
+                            ]
+                          }
+                        });
+                    break;
+            case 'nextseason':
+                if(!message.member.roles.find(r => r.name === "Moderator")) return message.channel.send("You do not have permissions")
+                    const nextseason = new Discord.RichEmbed()
+                    .setTitle('Teams that will join next season:')
+                    .setColor(0xEC7063)
+                    message.channel.sendEmbed(nextseason);
+                    break;     
+            
         }
         switch(args[0]) {
             case 'help':
                 if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
                     const help = new Discord.RichEmbed()
                     .setTitle('Commands')
-                    .addField('nlg/help', 'Get a list of all commands and their functions')
-                    .addField('nlg/week', 'See what we are doing this week.')
-                    .addField('nlg/discord', 'Get the discord invite link')
-                    .addField('nlg/twitter', 'Get a link to our Twitter page')
-                    .addField('nlg/youtube', 'Get a link to our YouTube page')
-                    .addField('nlg/twitch', 'Get a link to our Twitch page')
-                    .addField('nlg/online', 'See the online time of the bot')
-                    .addField('nlg/clear', 'Clear a chosen amount of messages')
-                    .addField('nlg/esl1', 'Show to setup of NLG 1')
-                    .addField('nlg/esl2', 'Show to setup of NLG 2')
+                    .addField('c/help', 'Get a list of all commands and their functions')
+                    .addField('c/leagueinfo', 'Get a document file with all the information about the League')
+                    .addField('c/tinfo', 'See what teams are in the league this season')
+                    .addField('c/week', 'See what league week it is, and what teams are playing this week.')
+                    .addField('c/discord', 'Get the discord invite link')
+                    .addField('c/twitter', 'Get a link to our Twitter page')
+                    .addField('c/youtube', 'Get a link to our YouTube page')
+                    .addField('c/twitch', 'Get a link to our Twitch page')
+                    .addField('c/online', 'See the online time of the bot')
                     .setColor(0x2ECC71)
                     message.channel.sendEmbed(help);
                     break;
             case 'twitter':
                 if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
-                    message.channel.sendMessage('https://twitter.com/NoLimitsGaming');
+                    message.channel.sendMessage('https://twitter.com/CuoreLeague');
                     break;
             case 'youtube':
                 if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
@@ -75,21 +154,32 @@ bot.on('message', message=>{
                     break;
             case 'twitch':
                 if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
-                   message.channel.sendMessage('https://www.twitch.tv/nolimitsgaming')
+                   message.channel.sendMessage('https://www.twitch.tv/cuoreleague')
                    break;
             case 'discord':
                 if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
-                    message.channel.sendMessage('https://discord.gg/XjjVsqF')
+                    message.channel.sendMessage('https://discord.gg/54mmrC3')
                     break;
             case 'week':
                 if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
-                    const week = new Discord.RichEmbed()
-                    .setTitle('Week Planning - NLG')
-                    .addField('Teams that play this week:', 'N/A')
-                    .addField('_ _', 'N/A')
-                    .addField('Twitch', 'https://www.twitch.tv/nolimitsgaming')
-                    .setColor(0x2ECC71)
-                    message.channel.sendEmbed(week);
+                    message.channel.send({embed: {
+                            color: 2491032,
+                            title: "Week 1 - 8 & 9 June - CuoreLeague",
+                            fields: [
+                              { name: "Teams that play saturday:", value: "DA - NLG\nTPG1 - FEs\nTPG2 - AE\n", inline: true},
+                              { name: "Time", value: "19:00\n20:15\n21:30", inline: true},
+                              { name: 'Score:', value: 'N/A\nN/A\nN/A', inline: true},
+                              { name: "Teams that play sunday", value: "BF - WP\nYAG - EDT\nFD - TI", inline: true},
+                              { name: "Time", value: "19:00\n20:15\n21:30", inline: true},
+                              { name: 'Score:', value: 'N/A\nN/A\nN/A', inline: true},
+                              { name: 'Twitch:', value: "https://www.twitch.tv/cuoreleague", inline: false}
+                            ]
+                          }
+                        });
+                    break;
+            case 'leagueinfo':
+                if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
+                    message.channel.sendMessage('In maintenance')
                     break;
             case 'online':
                 if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
@@ -107,30 +197,5 @@ bot.on('message', message=>{
                     message.channel.sendEmbed(embed);
                     break;
         }
-        switch(args[0]){
-            case 'esl1':
-                if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
-                    const esl1 = new Discord.RichEmbed()
-                    .setTitle('ESL 1 Setup:')
-                    .addField('Coach:', 'LagGrenade.NLG')
-                    .addField('IGL:', 'Ninja.NLG')
-                    .addField('Main:', 'Lortboy.NLG, Angor.NLG, Jubiman.NLG, Stofzuig.NLG')
-                    .addField('Sub:', 'King.NLG, Jimmy-Egg.NLG')
-                    .setColor(0x0FFEC)
-                    message.channel.sendEmbed(esl1);
-                    break;
-            case 'esl2':
-                if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
-                   const esl2 = new Discord.RichEmbed()
-                    .setTitle('ESL 2 Setup:')
-                    .addField('Coach:', 'N/A')
-                    .addField('IGL:',  'Ecaron.NLG')
-                    .addField('Main:', 'Cha0s.NLG, Reniplay.NLG, R4mbo.NLG, Reklas.NLG')
-                    .addField('Sub:', 'ParadoX.NLG, Tim.NLG')
-                    .setColor(0xFF0087)
-                    message.channel.sendEmbed(esl2);
-                    break;
-        }
 })
 client.login(process.env.BOT_TOKEN);
-
