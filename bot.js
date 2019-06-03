@@ -1,13 +1,13 @@
 const Discord = require('discord.js');
-const bot = new Discord.Client();
+const client = new Discord.Client();
 
 const PREFIX =  'c/';
 
-bot.on('ready', () => {
+client.on('ready', () => {
     console.log('This bot is online!')
 })
 
-bot.on('message', message=>{
+client.on('message', message=>{
     let args = message.content.substring(PREFIX.length).split(" ");
         switch(args[0]) {
             case 'clear':
