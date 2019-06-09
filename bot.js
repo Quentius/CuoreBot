@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('message', message => {
-    if (message.content === 'teams') {
+    if (message.content === 'c/teams') {
     	if(!message.member.roles.find(r => r.name === "Moderator")) return message.channel.send("You do not have permissions")
                     const nlg = new  Discord.RichEmbed()
                     .setTitle('Team name: No Limits Gaming')
@@ -90,7 +90,7 @@ client.on('message', message => {
                     .setColor(0xD2B4DE)
                     message.channel.sendEmbed(tf);
   	}
-    if (message.content === 'teams') {
+    if (message.content === 'c/tinfo') {
                     if(!message.member.roles.find(r => r.name === "Moderator")) return message.channel.send("You do not have permissions")
                         message.channel.send({embed: {
                             color: 9291032,
@@ -103,7 +103,7 @@ client.on('message', message => {
                             ]
                           }
                         })
-    if (message.content === 'teams') {
+    if (message.content === 'c/nextseason') {
                 if(!message.member.roles.find(r => r.name === "Moderator")) return message.channel.send("You do not have permissions")
                     const nextseason = new Discord.RichEmbed()
                     .setTitle('Teams that will join next season:')
@@ -112,7 +112,7 @@ client.on('message', message => {
                     break;     
             
         }
-    if (message.content === 'teams') {
+    if (message.content === 'c/help') {
                 if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
                     const help = new Discord.RichEmbed()
                     .setTitle('Commands')
@@ -129,27 +129,27 @@ client.on('message', message => {
                     message.channel.sendEmbed(help);
                     break;
     }
-    if (message.content === 'teams') {
+    if (message.content === 'c/twitter') {
                 if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
                     message.channel.sendMessage('https://twitter.com/CuoreLeague');
                     break;
     }
-    if (message.content === 'teams') {
+    if (message.content === 'c/youtube') {
                 if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
                     message.channel.sendMessage('https://www.youtube.com/channel/UC0MdpWpAxgA3sU2OUo9r-ZA')
                     break;
     }
-    if (message.content === 'teams') {
+    if (message.content === 'c/twitch') {
                 if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
                    message.channel.sendMessage('https://www.twitch.tv/cuoreleague')
                    break;
     }
-    if (message.content === 'teams') {
+    if (message.content === 'c/discord') {
                 if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
                     message.channel.sendMessage('https://discord.gg/54mmrC3')
                     break;
     }
-    if (message.content === 'teams') {
+    if (message.content === 'c/week') {
                 if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
                     message.channel.send({embed: {
                             color: 2491032,
@@ -176,12 +176,12 @@ client.on('message', message => {
                           }
                         });
     }
-    if (message.content === 'teams') {
+    if (message.content === 'c/leagueinfo') {
                 if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
                     message.channel.sendMessage('In maintenance')
                     break;
     }
-    if (message.content === 'teams') {
+    if (message.content === 'c/online') {
                 if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
                     let totalSeconds = (client.uptime / 1000);
                     let days = Math.floor(totalSeconds / 86400);
