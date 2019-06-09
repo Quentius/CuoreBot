@@ -4,7 +4,6 @@ const client = new Discord.Client();
 
 client.on('message', message => {
     if (message.content === 'teams') {
-        message.reply('pong');
     	if(!message.member.roles.find(r => r.name === "Moderator")) return message.channel.send("You do not have permissions")
                     const nlg = new  Discord.RichEmbed()
                     .setTitle('Team name: No Limits Gaming')
