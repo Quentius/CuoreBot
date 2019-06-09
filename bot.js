@@ -5,7 +5,7 @@ const client = new Discord.Client();
 client.on('message', message => {
     if (message.content === 'teams') {
     	if(!message.member.roles.find(r => r.name === "Moderator")) return message.channel.send("You do not have permissions")
-                       const nlg = new  Discord.RichEmbed()
+                    const nlg = new  Discord.RichEmbed()
                     .setTitle('Team name: No Limits Gaming')
                     .addField('Nationality', 'Europe')
                     .addField('Captains Discord', "@Nick[Ninja]#5302")
@@ -89,7 +89,6 @@ client.on('message', message => {
                     .addField('Captains Uplay', 'Pjotter.FeaR')
                     .setColor(0xD2B4DE)
                     message.channel.sendEmbed(tf);
-                    break;
   	}
 })
 
