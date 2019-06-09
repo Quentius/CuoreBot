@@ -154,13 +154,13 @@ client.on('message', message => {
                             title: "Week 1 - 8 & 9 June - CuoreLeague",
                             fields: [
                                 //Saturday
-                              { name: "Teams that have played saturday:", value: "DA - NLG", inline: true},
+                              { name: "Teams that play saturday:", value: "DA - NLG", inline: true},
                               { name: "Time", value: "19:00", inline: true},
                               { name: 'Score:', value: '4-7', inline: true},
                               //Sunday
-                              { name: "Teams that play today", value: "BF - WP\nDYN - EDT\nFD - TI", inline: true},
+                              { name: "Teams that play sunday", value: "BF - WP\nDYN - EDT\nCM - TI", inline: true},
                               { name: "Time", value: "19:00\n20:15\n21:30", inline: true},
-                              { name: 'Score:', value: 'N/A\nN/A\nN/A', inline: true},
+                              { name: 'Score:', value: '7-2\n7-4\n0-1', inline: true},
                               //Monday if needed
                               { name: "Teams that play monday", value: "TPG2 - AE", inline: true},
                               { name: "Time", value: "20:00", inline: true},
