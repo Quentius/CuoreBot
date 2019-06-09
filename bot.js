@@ -94,6 +94,20 @@ client.on('message', message => {
                     .setColor(0xD2B4DE)
                     message.channel.sendEmbed(tf);
   	}
+    if (message.content === 'c/tinfo') {
+                    if(!message.member.roles.find(r => r.name === "Moderator")) return message.channel.send("You do not have permissions")
+                        message.channel.send({embed: {
+                            color: 9291032,
+                            title: "Cuore League - Teams:",
+                            fields: [
+                              { name: "Teams 1-6", value: "NoLimitsGaming\nDarkAssassin's\nTheProblemGods1\nForDefenders\nEvoDevTeam\nAffinityeSports", inline: true},
+                              { name: "Teams 7-12", value: "TheProblemGods2\nBurningFoxes\nYDynastyeSports\nTeamIntelliGents\nWastedPotential\nFeaR eSports", inline: true},
+                              {name: '_ _', value: '_ _', inline: false},
+                              {name: 'There are currently:', value: '12 teams', inline: false}
+                            ]
+                          }
+                        })
+    }
 });
 
 // THIS  MUST  BE  THIS  WAY
