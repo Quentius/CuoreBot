@@ -115,6 +115,22 @@ client.on('message', message => {
                     .setColor(0xEC7063)
                     message.channel.sendEmbed(nextseason);
     }
+    if (message.content === 'c/help') {
+                if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
+                    const help = new Discord.RichEmbed()
+                    .setTitle('Commands')
+                    .addField('c/help', 'Get a list of all commands and their functions')
+                    .addField('c/leagueinfo', 'Get a document file with all the information about the League')
+                    .addField('c/tinfo', 'See what teams are in the league this season')
+                    .addField('c/week', 'See what league week it is, and what teams are playing this week.')
+                    .addField('c/discord', 'Get the discord invite link')
+                    .addField('c/twitter', 'Get a link to our Twitter page')
+                    .addField('c/youtube', 'Get a link to our YouTube page')
+                    .addField('c/twitch', 'Get a link to our Twitch page')
+                    .addField('c/online', 'See the online time of the bot')
+                    .setColor(0x2ECC71)
+                    message.channel.sendEmbed(help);
+    }
 });
 
 // THIS  MUST  BE  THIS  WAY
