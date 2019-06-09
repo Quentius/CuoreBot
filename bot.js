@@ -131,6 +131,68 @@ client.on('message', message => {
                     .setColor(0x2ECC71)
                     message.channel.sendEmbed(help);
     }
+    if (message.content === 'c/twitter') {
+                if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
+                    message.channel.sendMessage('https://twitter.com/CuoreLeague');
+    }
+    if (message.content === 'c/youtube') {
+                if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
+                    message.channel.sendMessage('https://www.youtube.com/channel/UC0MdpWpAxgA3sU2OUo9r-ZA')
+    }
+    if (message.content === 'c/twitch') {
+                if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
+                   message.channel.sendMessage('https://www.twitch.tv/cuoreleague')
+    }
+    if (message.content === 'c/discord') {
+                if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
+                    message.channel.sendMessage('https://discord.gg/54mmrC3')
+    }
+    if (message.content === 'c/week') {
+                if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
+                    message.channel.send({embed: {
+                            color: 2491032,
+                            title: "Week 1 - 8 & 9 June - CuoreLeague",
+                            fields: [
+                                //Saturday
+                              { name: "Teams that have played saturday:", value: "DA - NLG", inline: true},
+                              { name: "Time", value: "19:00", inline: true},
+                              { name: 'Score:', value: '4-7', inline: true},
+                              //Sunday
+                              { name: "Teams that play today", value: "BF - WP\nDYN - EDT\nFD - TI", inline: true},
+                              { name: "Time", value: "19:00\n20:15\n21:30", inline: true},
+                              { name: 'Score:', value: 'N/A\nN/A\nN/A', inline: true},
+                              //Monday if needed
+                              { name: "Teams that play monday", value: "TPG2 - AE", inline: true},
+                              { name: "Time", value: "20:00", inline: true},
+                              { name: 'Score:', value: 'N/A', inline: true},
+                              //Tuesday if needed
+                              { name: "Teams that play tuesday", value: "TPG1 - FeaR", inline: true},
+                              { name: "Time", value: "20:00", inline: true},
+                              { name: 'Score:', value: 'N/A', inline: true},
+                              { name: 'Twitch:', value: "https://www.twitch.tv/cuoreleague", inline: false}
+                            ]
+                          }
+                        });
+    }
+    if (message.content === 'c/leagueinfo') {
+                if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
+                    message.channel.sendMessage('In maintenance')
+    }
+    if (message.content === 'c/online') {
+                if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
+                    let totalSeconds = (client.uptime / 1000);
+                    let days = Math.floor(totalSeconds / 86400);
+                    let hours = Math.floor(totalSeconds / 3600);
+                    totalSeconds %= 3600;
+                    let minutes = Math.floor(totalSeconds / 60);
+                    let seconds = Math.floor(totalSeconds % 60);
+                    let uptime = `${days} days, ${hours} hours, ${minutes} minutes and ${seconds} seconds`;
+                    const embed = new Discord.RichEmbed()
+                    .setTitle('Runtime:')
+                    .addField('The bot has been online for:', uptime)
+                    .setColor(0xF7FF00)
+                    message.channel.sendEmbed(embed);
+    }
 });
 
 // THIS  MUST  BE  THIS  WAY
