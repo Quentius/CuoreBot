@@ -114,8 +114,6 @@ client.on('message', message => {
                     .setTitle('Teams that will join next season:')
                     .setColor(0xEC7063)
                     message.channel.sendEmbed(nextseason);
-                    break;     
-            
     }
 });
 
