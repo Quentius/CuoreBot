@@ -90,6 +90,114 @@ client.on('message', message => {
                     .setColor(0xD2B4DE)
                     message.channel.sendEmbed(tf);
   	}
+    if (message.content === 'teams') {
+                    if(!message.member.roles.find(r => r.name === "Moderator")) return message.channel.send("You do not have permissions")
+                        message.channel.send({embed: {
+                            color: 9291032,
+                            title: "Cuore League - Teams:",
+                            fields: [
+                              { name: "Teams 1-6", value: "NoLimitsGaming\nDarkAssassin's\nTheProblemGods1\nForDefenders\nEvoDevTeam\nAffinityeSports", inline: true},
+                              { name: "Teams 7-12", value: "TheProblemGods2\nBurningFoxes\nYDynastyeSports\nTeamIntelliGents\nWastedPotential\nFeaR eSports", inline: true},
+                              {name: '_ _', value: '_ _', inline: false},
+                              {name: 'There are currently:', value: '12 teams', inline: false}
+                            ]
+                          }
+                        })
+    if (message.content === 'teams') {
+                if(!message.member.roles.find(r => r.name === "Moderator")) return message.channel.send("You do not have permissions")
+                    const nextseason = new Discord.RichEmbed()
+                    .setTitle('Teams that will join next season:')
+                    .setColor(0xEC7063)
+                    message.channel.sendEmbed(nextseason);
+                    break;     
+            
+        }
+    if (message.content === 'teams') {
+                if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
+                    const help = new Discord.RichEmbed()
+                    .setTitle('Commands')
+                    .addField('c/help', 'Get a list of all commands and their functions')
+                    .addField('c/leagueinfo', 'Get a document file with all the information about the League')
+                    .addField('c/tinfo', 'See what teams are in the league this season')
+                    .addField('c/week', 'See what league week it is, and what teams are playing this week.')
+                    .addField('c/discord', 'Get the discord invite link')
+                    .addField('c/twitter', 'Get a link to our Twitter page')
+                    .addField('c/youtube', 'Get a link to our YouTube page')
+                    .addField('c/twitch', 'Get a link to our Twitch page')
+                    .addField('c/online', 'See the online time of the bot')
+                    .setColor(0x2ECC71)
+                    message.channel.sendEmbed(help);
+                    break;
+    }
+    if (message.content === 'teams') {
+                if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
+                    message.channel.sendMessage('https://twitter.com/CuoreLeague');
+                    break;
+    }
+    if (message.content === 'teams') {
+                if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
+                    message.channel.sendMessage('https://www.youtube.com/channel/UC0MdpWpAxgA3sU2OUo9r-ZA')
+                    break;
+    }
+    if (message.content === 'teams') {
+                if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
+                   message.channel.sendMessage('https://www.twitch.tv/cuoreleague')
+                   break;
+    }
+    if (message.content === 'teams') {
+                if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
+                    message.channel.sendMessage('https://discord.gg/54mmrC3')
+                    break;
+    }
+    if (message.content === 'teams') {
+                if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
+                    message.channel.send({embed: {
+                            color: 2491032,
+                            title: "Week 1 - 8 & 9 June - CuoreLeague",
+                            fields: [
+                                //Saturday
+                              { name: "Teams that have played saturday:", value: "DA - NLG", inline: true},
+                              { name: "Time", value: "19:00", inline: true},
+                              { name: 'Score:', value: '4-7', inline: true},
+                              //Sunday
+                              { name: "Teams that play today", value: "BF - WP\nDYN - EDT\nFD - TI", inline: true},
+                              { name: "Time", value: "19:00\n20:15\n21:30", inline: true},
+                              { name: 'Score:', value: 'N/A\nN/A\nN/A', inline: true},
+                              //Monday if needed
+                              { name: "Teams that play monday", value: "TPG2 - AE", inline: true},
+                              { name: "Time", value: "20:00", inline: true},
+                              { name: 'Score:', value: 'N/A', inline: true},
+                              //Tuesday if needed
+                              { name: "Teams that play tuesday", value: "TPG1 - FeaR", inline: true},
+                              { name: "Time", value: "20:00", inline: true},
+                              { name: 'Score:', value: 'N/A', inline: true},
+                              { name: 'Twitch:', value: "https://www.twitch.tv/cuoreleague", inline: false}
+                            ]
+                          }
+                        });
+    }
+    if (message.content === 'teams') {
+                if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
+                    message.channel.sendMessage('In maintenance')
+                    break;
+    }
+    if (message.content === 'teams') {
+                if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
+                    let totalSeconds = (client.uptime / 1000);
+                    let days = Math.floor(totalSeconds / 86400);
+                    let hours = Math.floor(totalSeconds / 3600);
+                    totalSeconds %= 3600;
+                    let minutes = Math.floor(totalSeconds / 60);
+                    let seconds = Math.floor(totalSeconds % 60);
+                    let uptime = `${days} days, ${hours} hours, ${minutes} minutes and ${seconds} seconds`;
+                    const embed = new Discord.RichEmbed()
+                    .setTitle('Runtime:')
+                    .addField('The bot has been online for:', uptime)
+                    .setColor(0xF7FF00)
+                    message.channel.sendEmbed(embed);
+                    break;
+    }
+        
 })
 
 // THIS  MUST  BE  THIS  WAY
