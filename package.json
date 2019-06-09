@@ -1,6 +1,6 @@
 {
-  "name": "Test",
-  "description": "Test",
+  "name": "CuoreLeague Bot",
+  "description": "CuoreLeague Bot",
   "version": "0.0.0",
   "main": "bot.js",
   "scripts": {
