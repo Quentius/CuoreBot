@@ -125,7 +125,7 @@ client.on('message', message => {
                     .addField('Nationality', 'Austria')
                     .addField('Captains Discord', 'UNIGOD#4856')
                     .addField('Captains Uplay', 'UNIGOD-STIGMA')
-                    .setColor(0xD2B4DE)
+                    .setColor(0x913c3c)
                     message.channel.sendEmbed(stigma);
         
                     const nexus = new Discord.RichEmbed()
@@ -133,7 +133,7 @@ client.on('message', message => {
                     .addField('Nationality', 'Europe')
                     .addField('Captains Discord', 'Prept1me#2734')
                     .addField('Captains Uplay', 'Prept1me.Nexus')
-                    .setColor(0xD2B4DE)
+                    .setColor(0x925f28)
                     message.channel.sendEmbed(nexus);
         
                     const entry = new Discord.RichEmbed()
@@ -141,7 +141,7 @@ client.on('message', message => {
                     .addField('Nationality', 'Europe')
                     .addField('Captains Discord', 'Cookie#8110')
                     .addField('Captains Uplay', 'Cookie.EYT')
-                    .setColor(0xD2B4DE)
+                    .setColor(0xE06947)
                     message.channel.sendEmbed(entry);
     }
     if (message.content === 'c/help') {
