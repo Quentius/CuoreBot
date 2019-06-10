@@ -114,6 +114,7 @@ client.on('message', message => {
                     .setTitle('Teams that will join next season:')
                     .addField('Retribution eSports', 'UNIGOD-STIGMA')
                     .addField('Nexus eSports', 'Prept1me.Nexus')
+                    .addField('Entry eSports', 'Cookie.EYT')
                     .setColor(0xEC7063)
                     message.channel.sendEmbed(nextseason);
     }
@@ -134,6 +135,14 @@ client.on('message', message => {
                     .addField('Captains Uplay', 'Prept1me.Nexus')
                     .setColor(0xD2B4DE)
                     message.channel.sendEmbed(nexus);
+        
+                    const entry = new Discord.RichEmbed()
+                    .setTitle('Team name: Entry eSports')
+                    .addField('Nationality', 'Europe')
+                    .addField('Captains Discord', 'Cookie#8110')
+                    .addField('Captains Uplay', 'Cookie.EYT')
+                    .setColor(0xD2B4DE)
+                    message.channel.sendEmbed(entry);
     }
     if (message.content === 'c/help') {
                 if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
