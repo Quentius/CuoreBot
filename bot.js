@@ -112,9 +112,28 @@ client.on('message', message => {
                 if(!message.member.roles.find(r => r.name === "Moderator")) return message.channel.send("You do not have permissions")
                     const nextseason = new Discord.RichEmbed()
                     .setTitle('Teams that will join next season:')
-                    .addField('Retribution eSports Club', 'UNIGOD-STIGMA')
+                    .addField('Retribution eSports', 'UNIGOD-STIGMA')
+                    .addField('Nexus eSports', 'Prept1me.Nexus')
                     .setColor(0xEC7063)
                     message.channel.sendEmbed(nextseason);
+    }
+    if (message.content === 'c/eksdeenotusable') {
+                if(!message.member.roles.find(r => r.name === "Moderator")) return message.channel.send("You do not have permissions")
+                    const stigma = new Discord.RichEmbed()
+                    .setTitle('Team name: Retribution eSports')
+                    .addField('Nationality', 'Austria')
+                    .addField('Captains Discord', 'UNIGOD#4856')
+                    .addField('Captains Uplay', 'UNIGOD-STIGMA')
+                    .setColor(0xD2B4DE)
+                    message.channel.sendEmbed(stigma);
+        
+                    const nexus = new Discord.RichEmbed()
+                    .setTitle('Team name: Nexus eSports')
+                    .addField('Nationality', 'Europe')
+                    .addField('Captains Discord', 'Prept1me#2734')
+                    .addField('Captains Uplay', 'Prept1me.Nexus')
+                    .setColor(0xD2B4DE)
+                    message.channel.sendEmbed(nexus);
     }
     if (message.content === 'c/help') {
                 if(!message.member.roles.find(r => r.name === "Guest")) return message.channel.send("You do not have permissions")
