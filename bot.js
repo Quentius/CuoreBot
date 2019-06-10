@@ -112,6 +112,7 @@ client.on('message', message => {
                 if(!message.member.roles.find(r => r.name === "Moderator")) return message.channel.send("You do not have permissions")
                     const nextseason = new Discord.RichEmbed()
                     .setTitle('Teams that will join next season:')
+                    .addField('Retribution eSports Club', 'UNIGOD-STIGMA')
                     .setColor(0xEC7063)
                     message.channel.sendEmbed(nextseason);
     }
