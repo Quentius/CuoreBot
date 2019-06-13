@@ -183,21 +183,21 @@ client.on('message', message => {
                             title: "Week 1 - 8 & 9 June - CuoreLeague",
                             fields: [
                                 //Saturday
-                              { name: "Teams that play saturday:", value: "DA - NLG", inline: true},
+                              { name: "Teams that play saturday:", value: "FeaR - DA\nWP - TPG2\nTI - DYN", inline: true},
                               { name: "Time", value: "19:00", inline: true},
-                              { name: 'Score:', value: '4-7', inline: true},
+                              { name: 'Score:', value: 'N/A\nN/A\nN/A', inline: true},
                               //Sunday
-                              { name: "Teams that play sunday", value: "BF - WP\nDYN - EDT\nCM - TI", inline: true},
+                              { name: "Teams that play sunday", value: "NLG - FD\nEDT - BF\nAFF - TPG1", inline: true},
                               { name: "Time", value: "19:00\n20:15\n21:30", inline: true},
-                              { name: 'Score:', value: '7-2\n7-4\n0-1', inline: true},
+                              { name: 'Score:', value: 'N/A\nN/A\nN/A', inline: true},
                               //Monday if needed
-                              { name: "Teams that play monday", value: "TPG2 - AE", inline: true},
-                              { name: "Time", value: "20:00", inline: true},
-                              { name: 'Score:', value: 'N/A', inline: true},
+                              //{ name: "Teams that play monday", value: "TPG2 - AE", inline: true},
+                              //{ name: "Time", value: "20:00", inline: true},
+                              //{ name: 'Score:', value: 'N/A', inline: true},
                               //Tuesday if needed
-                              { name: "Teams that play tuesday", value: "TPG1 - FeaR", inline: true},
-                              { name: "Time", value: "20:00", inline: true},
-                              { name: 'Score:', value: 'N/A', inline: true},
+                              //{ name: "Teams that play tuesday", value: "TPG1 - FeaR", inline: true},
+                              //{ name: "Time", value: "20:00", inline: true},
+                              //{ name: 'Score:', value: 'N/A', inline: true},
                               { name: 'Twitch:', value: "https://www.twitch.tv/cuoreleague", inline: false}
                             ]
                           }
